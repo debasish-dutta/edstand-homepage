@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /**font-family: 'Indie Flower', cursive;*/
+    /**font-family: 'Pacifico', cursive;*?
+    /**font-family: 'Dancing Script', cursive;*/
+    font-size: 20px;
+    color: #545454;
+}
+
+h1,
+p {
+    margin: 0;
+}
+
+a,
+a:hover,
+a:active,
+a:focus {
+    text-decoration: none;
+    outline: 0;
+}
+
+
+
+ul {
+    list-style: none;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.bolder {
+    font-weight: 900;
+}
+
+.left {
+    text-align: left;
+}
+
+.right {
+    text-align: right;
+}
+
+.center {
+    text-align: center;
+}
+
+.white {
+    color: #fff;
+}
+
+.primary {
+    color: #d35400;
+}
+
+.primary-bg {
+    background-color: #d35400;
+}
+
+.blue {
+    color: #3498db;
+}
+
+.blue-bg {
+    background-color: #3498db;
+}
+
+.green {
+    color: #27ae60;
+}
+
+.green-bg {
+    background-color: #27ae60;
+}

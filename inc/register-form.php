@@ -60,7 +60,7 @@ $tchfield = mysqli_real_escape_string($link, $_POST['expertise']);
 
 
             mysqli_query($link, $query);
-
+            header("Location: userProfile.php");
 
           }
 
@@ -82,7 +82,7 @@ $tchfield = mysqli_real_escape_string($link, $_POST['expertise']);
 
 ?>
 
-<section class="login" style="padding: 170px;">
+<section style="padding: 170px;">
 
   <div class="container">
 

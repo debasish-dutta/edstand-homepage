@@ -1,6 +1,13 @@
 <?php
 
-	@session_start();
+	 session_start();
+
+	 if (array_key_exists("logout", $_GET)) {
+	 		unset($_SESSION);
+
+
+	 }
+
 
 	if(isset($_SESSION['username']))
 	{
@@ -51,38 +58,32 @@
 
         </ul>
         <ul class="navbar-nav">
-          <!--<li class="nav-item dropdown">
-                       <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                         Dropdown
-                       </a>
-                       <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                           <a class="dropdown-item" href="#">Action</a>
-                           <a class="dropdown-item" href="#">Another action</a>
-                       </div>
-                   </li>-->
-          <li class="nav-item">
-            <?php
+					<li class="nav-item">
+						<?php
 								if($session==null)
 								{
 							?>
-            <a class="nav-link" href="login.php"><i class="fas fa-sign-in-alt"></i>Login</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="register.php"><i class="fas fa-user-plus"></i>SignUp</a>
-          </li>
-          <?php
-                }
-                else
+						<a class="nav-link" href="login.php"><i class="fas fa-sign-in-alt"></i>Login</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="register.php"><i class="fas fa-user-plus"></i>SignUp</a>
+					</li>
+					<?php
+								}
+								else
 								{
 							?>
-          <li class="nav-item">
-            <a class="nav-link" href="register.php"><i class="fas fa-user-plus"></i>Logout</a>
-          </li>
-          <?php
-        }
+					<li class="nav-item">
+							<a class="nav-link" href="userProfile.php"><i class="fas fa-user-plus"></i>My Profile</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="index.php?logout=1"><i class="fas fa-user-plus"></i>Logout</a>
+					</li>
+					<?php
+				}
 							?>
 
-        </ul>
+				</ul>
       </div>
     </nav>
   </div>

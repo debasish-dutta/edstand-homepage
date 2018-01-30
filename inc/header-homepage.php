@@ -1,10 +1,17 @@
 <?php
 
-	@session_start();
+	session_start();
 
-	if(isset($_SESSION['user']))
+	if (array_key_exists("logout", $_GET)) {
+	    unset($_SESSION);
+
+
+	}
+
+
+	if(isset($_SESSION['username']))
 	{
-		$session = $_SESSION['user'];
+		$session = $_SESSION['username'];
 	}
 	else
 	{
@@ -75,8 +82,11 @@
                 else
 								{
 							?>
+					<li class="nav-item">
+									<a class="nav-link" href="userProfile.php"><i class="fas fa-user-plus"></i>My Profile</a>
+					</li>		
           <li class="nav-item">
-            <a class="nav-link" href="register.php"><i class="fas fa-user-plus"></i>Logout</a>
+            <a class="nav-link" href="index.php?logout=1"><i class="fas fa-user-plus"></i>Logout</a>
           </li>
           <?php
         }

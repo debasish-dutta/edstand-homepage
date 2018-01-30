@@ -18,22 +18,23 @@ global $link;
       if(mysqli_num_rows($resultusm)>0)
       		{
 
-
+            echo "<div class='col-md-3'>
+            </div>";
 
       			while($row = mysqli_fetch_assoc($resultusm)) {
       				echo "<div class='col-md'>";
-      				echo $tchname = $row['name'].'<br>';
-      				echo $tchemail = $row['email'].'<br>';
-      				echo $tchtlocn = $row['location'].'<br>';
+      				echo "Name : ".$tchname = $row['name'].'<br>';
+      				echo "Email : ".$tchemail = $row['email'].'<br>';
+      				echo "Location : ".$tchtlocn = $row['location'].'<br>';
 
       				if($row['expertise']=='')
       				{
-      					echo 'You haven\'t add any expertise yet.<br>';
+      					echo 'Expertise : You haven\'t add any expertise yet.<br>';
       				}
 
       				else
       				{
-      					echo $row['expertise'];
+      					echo "Expertise : ".$row['expertise'];
       				}
 
       				echo "</div>";
@@ -114,22 +115,17 @@ global $link;
   </div>
   <div class="container">
     <div class="row">
-			<div class="col-md-4 avatar">
+			<div class="col-md-4 avatar" style="margin:7px;">
 				<h2>Avatar</h2>
 				<?php get_avatar_image($session);?>
 				<div class="upload-avatar">
 					<input type="file" name="user-avatar-upload" id="user-avatar-upload">
 				</div>
 			</div>
-			<div class="col-md-8 profile">
+			<div class="col-md-7 profile" style="margin:7px;">
 				<h2>Profile Information</h2>
 				<div class="profile-information">
-              <div class='col-md-3'>
-          					Name : <br>
-          					Email : <br>
-          					Location : <br>
-          					Expertise : <br>
-    					</div>
+
 					<?php get_profile_info($session);?>
 		    </div>
       </div>

@@ -4,7 +4,9 @@
 
 	 if (array_key_exists("logout", $_GET)) {
 	 		unset($_SESSION);
+			session_destroy();
 
+			header ("Location:index.php");
 
 	 }
 
@@ -50,10 +52,10 @@
       <div id="navbarNavDropdown" class="navbar-collapse collapse">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#">About<span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="about.php">About<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Support</a>
+            <a class="nav-link" href="support.php">Support</a>
           </li>
 
         </ul>
@@ -74,10 +76,10 @@
 								{
 							?>
 					<li class="nav-item">
-							<a class="nav-link" href="userProfile.php"><i class="fas fa-user-plus"></i>My Profile</a>
+							<a class="nav-link" href="userProfile.php"><i class="fas fa-user"></i></i>My Profile</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="index.php?logout=1"><i class="fas fa-user-plus"></i>Logout</a>
+						<a class="nav-link" href="index.php?logout=1"><i class="fas fa-sign-out-alt"></i>Logout</a>
 					</li>
 					<?php
 				}

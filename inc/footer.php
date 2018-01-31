@@ -2,11 +2,14 @@
   <nav id="footer" class="navbar fixed-bottom navbar-expand-lg navbar-light bg-light bd-footer text-muted">
 
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">care@edStand.com <span class="sr-only">(current)</span></a>
+      <li class="nav-item">
+        <a class="nav-link" href="">care@edstand.com </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Terms  Privacy</a>
+        <a class="nav-link" href="terms.php">Terms and Conditions<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="privacypolicy.php">Privacy Policy</a>
       </li>
 
     </ul>

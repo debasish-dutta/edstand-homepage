@@ -45,12 +45,17 @@ $tchfield = mysqli_real_escape_string($link, $_POST['expertise']);
 
 
         if (mysqli_num_rows($resultusm) > 0) {
-          echo "username taken";
-        } elseif (mysqli_num_rows($resulteml) > 0) {
-          echo "email taken";
-        } elseif (mysqli_num_rows($resultphm) > 0) {
-          echo "phone number taken";
-        }  else {
+          $error .= "username taken<br>";
+        }
+        if (mysqli_num_rows($resulteml) > 0) {
+          $error .= "email taken<br>";
+        }
+        if (mysqli_num_rows($resultphm) > 0) {
+          $error .= "phone number taken<br>";
+        }
+        if ($error != "") {
+            $error = "<p> There are error(s)</p>".$error;
+        } else {
           $query = "INSERT INTO `tch-data` (`name`, `email`, `username`, `password`, `class`, `phone-number`, `location`, `subject`, `expertise`) VALUES ('$tchname', '$tchemail', '$tchusername', '$tchpassword', '$tchclass', '$tchphnnum', '$tchtlocn', '$tchtsub', '$tchfield')";
 
           if (!mysqli_query($link, $query)) {
@@ -82,18 +87,18 @@ $tchfield = mysqli_real_escape_string($link, $_POST['expertise']);
 
 ?>
 
-<section style="padding: 170px;">
+<section class="register" style="">
 
   <div class="container">
-
-<div id="error"> <?php echo $error; ?> </div>
+<div>
+<div id="error" class="center" style="padding-bottom: 30px;"> <?php echo $error; ?> </div>
     <form  action="register.php" method="post">
 
 
       <div class="form-group row">
         <label for="name" class="col-sm-3 col-form-label">Name</label>
         <div class="col-sm-9">
-          <input type="text" class="form-control" id="name" name="name" placeholder="Name">
+          <input type="text" class="form-control" id="name" name="name" placeholder="Name" required>
         </div>
       </div>
       <div class="form-group row">
@@ -200,4 +205,5 @@ $tchfield = mysqli_real_escape_string($link, $_POST['expertise']);
   </div>
     </form>
   </div>
+</div>
 </section>

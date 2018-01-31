@@ -15,7 +15,7 @@
     }
 
     if ($error != "") {
-        $error = "<p> There are error(s)</p>".$error;
+        $error .= "<p> There are error(s)</p>".$error;
     } else {
 
       $tchusername = mysqli_real_escape_string($link, $_POST['username']);
@@ -39,11 +39,11 @@
             header("Location: userProfile.php");
         } else {
 
-          $error = "WRONG password";
+          $error .= "WRONG password";
         }
       } else {
 
-        $error = "That email/passowrd combination cannot be found";
+        $error .= "That email/passowrd combination cannot be found";
       }
     }
   }
@@ -56,16 +56,16 @@
 ?>
 
 
-<section class="login" style="padding: 170px;">
+<section class="login" style="">
 
 	<div class="container">
 		<div >
       <div id="error"> <?php echo $error; ?> </div>
       <form class="" method="post">
-          <div class="form-group col-5 center">
+          <div class="form-group col-md-5 center">
             <input type="username" class="form-control" id="username" aria-describedby="emailHelp" placeholder="Enter username"   name="username">
           </div>
-          <div class="form-group col-5 center">
+          <div class="form-group col-md-5 center">
             <input type="password" class="form-control" id="password" placeholder="Password" name="password">
           </div>
           <!--<div class="form-check">

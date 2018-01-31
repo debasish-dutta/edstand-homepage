@@ -4,8 +4,9 @@
 
 	if (array_key_exists("logout", $_GET)) {
 	    unset($_SESSION);
+			session_destroy();
 
-
+			header ("Location:index.php");
 	}
 
 
@@ -83,10 +84,10 @@
 								{
 							?>
 					<li class="nav-item">
-									<a class="nav-link" href="userProfile.php"><i class="fas fa-user-plus"></i>My Profile</a>
-					</li>		
-          <li class="nav-item">
-            <a class="nav-link" href="index.php?logout=1"><i class="fas fa-user-plus"></i>Logout</a>
+						<a class="nav-link" href="userProfile.php"><i class="fas fa-user"></i></i>My Profile</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="index.php?logout=1"><i class="fas fa-sign-out-alt"></i>Logout</a>
           </li>
           <?php
         }

@@ -91,7 +91,7 @@ global $link;
   				{
   					$pic = 1;
   					$avatar_image_path = $avatar_image_folder.'/'.$entry;
-  					echo "<img src=$avatar_image_path alt=$entry id=avatar-image-id width='300px'/>";
+  					echo "<img src=$avatar_image_path alt=$entry id='avatar-image-id' width='230px' height='200px' class='rounded-circle'/>";
   				}
   			}
 
@@ -100,7 +100,7 @@ global $link;
 
   		if($pic==0)
   		{
-  			echo "<img src='img/user-default.jpg' id='avatar-image-id' width='300px'/>";
+  			echo "<img src='img/user-default.jpg' id='avatar-image-id' width='230px' height='200px' class='rounded-circle' />";
   		}
   	}
 
@@ -109,14 +109,14 @@ global $link;
 ?>
 
 
-<section class="">
+<section class="container profile">
   <div class="section-header center">
       <h1>Welcome <?php echo ucfirst($session); ?></h1>
   </div>
   <div class="container">
     <div class="row">
-			<div class="col-md-4 avatar" style="margin:7px;">
-				<h2>Avatar</h2>
+      <div class="col-md-4 avatar" style="margin:7px;">
+				<!--<h2 class="">Avatar</h2>-->
 				<?php get_avatar_image($session);?>
 				<div class="upload-avatar">
 					<input type="file" name="user-avatar-upload" id="user-avatar-upload">
@@ -125,13 +125,14 @@ global $link;
 			<div class="col-md-7 profile" style="margin:7px;">
 				<h2>Profile Information</h2>
 				<div class="profile-information">
-
-					<?php get_profile_info($session);?>
+					 <?php get_profile_info($session);?>
 		    </div>
+        <hr>
+          <div class="">
+            <p>120 seats avaliable under you.</p>
+          </div>
       </div>
     </div>
-    <div class="" style="width:1px; height :100%;">
-      <h6></h6>
-    </div>
+
 </div>
 </section>

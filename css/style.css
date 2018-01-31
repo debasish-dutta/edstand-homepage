@@ -52,7 +52,9 @@ nav #menu ul {
         /**color: aquamarine;
         background-color: aqua;*/
     }
-
+    form {
+      padding: 40px;
+    }
 }
 @media only screen and (max-width:300px) {}
 
@@ -61,6 +63,9 @@ i {
 margin-left: 20px;
 margin-right: 20px;
 
+}
+form {
+  padding: 40px;
 }
 
 .footer-social {
@@ -106,3 +111,39 @@ footer {
  #social-gp:hover {
      color: #d34836;
  }
+
+#avatar-image-id  {
+  border-radius: 50%;
+}
+
+.profile {
+  margin-bottom: 150px;
+}
+.error  {
+  padding: 10px;
+}
+
+
+.login {
+
+}
+
+.register{
+    margin-bottom: : 20px;
+  }
+
+  hr {
+         display: block;
+         position: relative;
+         padding: 0;
+         margin: 8px auto;
+         height: 0;
+         width: 100%;
+         max-height: 0;
+         font-size: 1px;
+         line-height: 0;
+         clear: both;
+         border: none;
+         border-top: 1px solid #aaaaaa;
+         border-bottom: 1px solid #ffffff;
+      }

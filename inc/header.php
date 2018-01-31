@@ -5,10 +5,11 @@
 	 if (array_key_exists("logout", $_GET)) {
 	 		unset($_SESSION);
 			session_destroy();
-
+			setcookie("username", "", time() - 60*60);
+    	$_COOKIE["username"] = "";
 			header ("Location:index.php");
 
-	 }
+	 } 
 
 
 	if(isset($_SESSION['username']))

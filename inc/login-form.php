@@ -32,9 +32,9 @@
 
           $_SESSION['username'] = $row['username'];
 
-          /**if ($_POST['stayLoggedIn'] == '1') {
+          if ($_POST['stayLoggedIn'] == '1') {
             setcookie("username", $row['username'], time() + 60*60*24*365);
-          }*/
+          }
 
             header("Location: userProfile.php");
         } else {
@@ -68,10 +68,10 @@
           <div class="form-group col-md-5 center">
             <input type="password" class="form-control" id="password" placeholder="Password" name="password">
           </div>
-          <!--<div class="form-check">
+          <<div class="form-check">
             <input class="form-check-input" type="checkbox" name="stayLoggedIn" value="1" id="loggedInCheck">
             <label class="form-check-label" for="loggedInCheck">Keep me logged In!</label>
-          </div>-->
+          </div>
           <div class="form-check">
           <button type="submit" id="submit" name="submit" value="Login"class="btn btn-primary">Submit</button>
           </div>

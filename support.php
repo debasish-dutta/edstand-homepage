@@ -11,5 +11,5 @@ include 'inc/header.php';
 
 </section>
 <?php
-include 'inc/footer.php';
+include 'inc/footer-fixed-bottom.php';
  ?>

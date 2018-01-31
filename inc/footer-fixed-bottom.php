@@ -1,5 +1,5 @@
 <div id="app" class="container">
-  <nav id="footer" class="navbar fixed navbar-expand-lg navbar-light bg-light bd-footer text-muted">
+  <nav id="footer" class="navbar fixed-bottom navbar-expand-lg navbar-light bg-light bd-footer text-muted">
 
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">

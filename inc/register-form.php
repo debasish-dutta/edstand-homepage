@@ -172,23 +172,27 @@ $tchfield = mysqli_real_escape_string($link, $_POST['expertise']);
               <option>..</option>
               <option>..</option>
         </select>
+
     </div>
 </div>
 
 <div class="form-group row">
   <label class="col-sm-3 col-form-label" for="tsub">Select your subject</label>
-    <div class="col-sm-9">
+    <div class="col-md-4">
       <select class="col-auto select" id="tsub" name="tsub">
-            <option selected>Choose</option>
-            <option>SS</option>
-            <option>..</option>
-            <option>..</option>
-            <option>..</option>
-            <option>..</option>
-            <option>..</option>
-            <option>..</option>
+            <option selected>General Science</option>
+            <option>Mathematics</option>
+            <option>Engish</option>
       </select>
+      <div class="col-auto my-1">
+        <div class="custom-control custom-checkbox mr-sm-2">
+          <input class="custom-control-input" type="checkbox" name="stayLoggedIn" value="1" id="loggedInCheck">
+          <label class="custom-control-label" for="loggedInCheck">Keep me logged In!</label>
+        </div>
+      </div>
+      
     </div>
+
   </div>
 
   <div class="form-group row">

@@ -68,7 +68,7 @@
           <div class="form-group col-md-5 center">
             <input type="password" class="form-control" id="password" placeholder="Password" name="password">
           </div>
-          <<div class="form-check">
+          <div class="form-check">
             <input class="form-check-input" type="checkbox" name="stayLoggedIn" value="1" id="loggedInCheck">
             <label class="form-check-label" for="loggedInCheck">Keep me logged In!</label>
           </div>

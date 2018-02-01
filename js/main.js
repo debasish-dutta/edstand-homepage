@@ -1,11 +1,19 @@
-$(function () {
+$(document).ready(function () {
+        $('#tsub').change(function () {
+            if ($(this).val() == "Mathematics") {
+                $(':checkbox').each(function () {
+                    $(this).prop('disabled', false);
+                });
+            }
+            else {
+                $(':checkbox').each(function () {
+                    $(this).prop('disabled', true);
+                    $(this).prop('checked', false);
+                });
+            }
+        });
+    });
 
-    $(window).bind("resize", function () {
-        console.log($(this).width())
-        if ($(this).width() < 500) {
-            $('div').removeClass('col-md-5').addClass('col')
-        } else {
-            $('div').removeClass('col').addClass('col-md-5')
-        }
-    }).trigger('resize');
-})
+    $(window).load(function(){
+      $('#myModal').modal('show');
+       }); 

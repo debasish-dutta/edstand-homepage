@@ -65,7 +65,8 @@ $tchfield = mysqli_real_escape_string($link, $_POST['expertise']);
 
 
             mysqli_query($link, $query);
-            header("Location: userProfile.php");
+            $_SESSION['username'] = $tchusername;
+            header("Location: welcome-user.php");
 
           }
 
@@ -180,17 +181,17 @@ $tchfield = mysqli_real_escape_string($link, $_POST['expertise']);
   <label class="col-sm-3 col-form-label" for="tsub">Select your subject</label>
     <div class="col-md-4">
       <select class="col-auto select" id="tsub" name="tsub">
-            <option selected>General Science</option>
-            <option>Mathematics</option>
-            <option>Engish</option>
+            <option selected value="General-Science">General Science</option>
+            <option value="Mathematics">Mathematics</option>
+            <option value="Engish">Engish</option>
       </select>
-      <div class="col-auto my-1">
-        <div class="custom-control custom-checkbox mr-sm-2">
-          <input class="custom-control-input" type="checkbox" name="stayLoggedIn" value="1" id="loggedInCheck">
-          <label class="custom-control-label" for="loggedInCheck">Keep me logged In!</label>
+      <div >
+        <div class="custom-control custom-checkbox mr-sm-4">
+          <input class="custom-control-input advMath" type="checkbox" name="advMath" value="1" id="advMath" disabled="disabled">
+          <label class="custom-control-label" for="advMath">Advanced Mathematics (Only for class 9)</label>
         </div>
       </div>
-      
+
     </div>
 
   </div>

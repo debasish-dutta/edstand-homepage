@@ -1,22 +1,23 @@
 <div id="app" class="container">
   <nav id="footer" class="navbar fixed-bottom navbar-expand-lg navbar-light bg-light bd-footer text-muted">
 
-    <ul class="navbar-nav mr-auto">
+    <ul class="navbar-nav mr-auto custom-not-stacked">
+
       <li class="nav-item">
-        <a class="nav-link" href="">care@edstand.com </a>
+        <a class="nav-link" style="padding-top: 0px;padding-bottom: 0px;" href="">care@edstand.com </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="terms.php">Terms and Conditions<span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="terms.php"style="padding-top: 0px;padding-bottom: 0px;" >Terms and Conditions<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="privacypolicy.php">Privacy Policy</a>
+        <a class="nav-link" href="privacypolicy.php"style="padding-top: 0px;padding-bottom: 0px;" >Privacy Policy</a>
       </li>
 
     </ul>
     <div class="">
-      <a href="#"><i id="social-fb" class="fab fa-facebook-f social" aria-hidden="true"></i>
-      <a href="#"><i id="social-tw" class="fab fa-twitter social" aria-hidden="true"></i>
-      <a href="#"><i id="social-gp" class="fab fa-google-plus social" aria-hidden="true"></i>
+      <a href="#"><i id="social-fb" class="fab fa-facebook-f social" aria-hidden="true"></i></a>
+      <a href="#"><i id="social-tw" class="fab fa-twitter social" aria-hidden="true"></i></a>
+      <a href="#"><i id="social-gp" class="fab fa-google-plus social" aria-hidden="true"></i></a>
   </div>
 
 </nav>

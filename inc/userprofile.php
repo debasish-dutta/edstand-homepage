@@ -42,67 +42,68 @@ global $link;
           }
   	}
 
-  	function get_avatar_image($user)
-  	{
-  		$pic = 0;
-  		$upload_folder = "uploads";
-  		$user_folder = $upload_folder.'/'.$user;
-  		$avatar_image_folder = $user_folder.'/avatar';
+    function get_avatar_image($user)
+	{
+		$pic = 0;
+		$upload_folder = "uploads";
+		$user_folder = $upload_folder.'/'.$user;
+		$avatar_image_folder = $user_folder.'/avatar';
 
-  		if(is_dir($upload_folder))
-  		{
-  			if(is_dir($user_folder))
-  			{
+		if(is_dir($upload_folder))
+		{
+			if(is_dir($user_folder))
+			{
 
-  			}
-  			else
-  			{
-  				mkdir($user_folder);
-  			}
-  		}
+			}
+			else
+			{
+				mkdir($user_folder);
+			}
+		}
 
-  		else
-  		{
-  			mkdir($upload_folder);
-  			if(is_dir($user_folder))
-  			{
+		else
+		{
+			mkdir($upload_folder);
+			if(is_dir($user_folder))
+			{
 
-  			}
-  			else
-  			{
-  				mkdir($user_folder);
-  			}
-  		}
+			}
+			else
+			{
+				mkdir($user_folder);
+			}
+		}
 
-  		if(is_dir($avatar_image_folder))
-  		{
+		if(is_dir($avatar_image_folder))
+		{
 
-  		}
-  		else
-  		{
-  			mkdir($avatar_image_folder);
-  		}
+		}
+		else
+		{
+			mkdir($avatar_image_folder);
+		}
 
-  		if($handle = opendir($avatar_image_folder))
-  		{
-  			while(false!== ($entry = readdir($handle)))
-  			{
-  				if(($entry!='.') and ($entry!='..'))
-  				{
-  					$pic = 1;
-  					$avatar_image_path = $avatar_image_folder.'/'.$entry;
-  					echo "<img src=$avatar_image_path alt=$entry id='avatar-image-id' width='230px' height='200px' class='rounded-circle'/>";
-  				}
-  			}
+		if($handle = opendir($avatar_image_folder))
+		{
+			while(false!== ($entry = readdir($handle)))
+			{
+				if(($entry!='.') and ($entry!='..'))
+				{
+					$pic = 1;
+					$avatar_image_path = $avatar_image_folder.'/'.$entry;
+					echo "<img src=$avatar_image_path alt=$entry id=avatar-image-id width='300px'/>";
+				}
+			}
 
-  			closedir($handle);
-  		}
+			closedir($handle);
+		}
 
-  		if($pic==0)
-  		{
-  			echo "<img src='img/user-default.jpg' id='avatar-image-id' width='230px' height='200px' class='rounded-circle' />";
-  		}
-  	}
+		if($pic==0)
+		{
+			echo "<img src='images/user-default.jpg' id='avatar-image-id' width='300px'/>";
+		}
+	}
+
 
 
 
@@ -119,7 +120,7 @@ global $link;
 				<!--<h2 class="">Avatar</h2>-->
 				<?php get_avatar_image($session);?>
 				<div class="upload-avatar">
-					<input type="file" name="user-avatar-upload" id="user-avatar-upload">
+					<input type="file" class="form-control-file" name="" id="user-avatar-upload">
 				</div>
 			</div>
 			<div class="col-md-7 profile" style="margin:7px;">

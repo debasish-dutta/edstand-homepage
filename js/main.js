@@ -1,6 +1,6 @@
 $(document).ready(function () {
         $('#tsub').change(function () {
-          
+
             if ($(this).val() == "Mathematics") {
                 $(':checkbox').each(function () {
                     $(this).prop('disabled', false);
@@ -43,10 +43,11 @@ jQuery(document).ready(function(){
        			formdata.append('avatar',avatarfile);
        			var xhr = new XMLHttpRequest();
        			xhr.addEventListener("load",avatarloadedhandler,false);
-       			xhr.open('POST','inc/avatarchange.php');
+       			xhr.open('POST','avatarchange.php');
        			xhr.send(formdata);
 
        			function avatarloadedhandler(evt){
+              //alert(evt.target.responseText);
               $('#avatar-image-id').attr('src',evt.target.responseText);
        			}
        		}

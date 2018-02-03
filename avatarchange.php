@@ -13,6 +13,7 @@
 
 	move_uploaded_file($tmpname, $destination);
 
+
 	if($handle = opendir($avatar_image_folder))
 		{
 			while(false!== ($entry = readdir($handle)))

@@ -20,6 +20,7 @@
 
       $tchusername = mysqli_real_escape_string($link, $_POST['username']);
       $tchpassword = mysqli_real_escape_string($link, $_POST['password']);
+      $hashedpassword = md5($tchpassword);
 
       $queryusm = "SELECT id,username,password FROM `tch-data` WHERE `username` = '$tchusername'";
 
@@ -28,7 +29,7 @@
       $row = mysqli_fetch_array($resultusm);
 
       if(isset($row)) {
-        if ($tchpassword == $row['password']) {
+        if ($hashedpassword == $row['password']) {
 
           $_SESSION['username'] = $row['username'];
 

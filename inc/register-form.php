@@ -28,6 +28,7 @@ $tchname = mysqli_real_escape_string($link, $_POST['name']);
 $tchemail = mysqli_real_escape_string($link, $_POST['email']);
 $tchusername = mysqli_real_escape_string($link, $_POST['username']);
 $tchpassword = mysqli_real_escape_string($link, $_POST['password']);
+$hashedpassword = md5($tchpassword);
 $tchclass = mysqli_real_escape_string($link, $_POST['class']);
 $tchphnnum = mysqli_real_escape_string($link, $_POST['phone-number']);
 $tchtlocn = mysqli_real_escape_string($link, $_POST['tlocn']);
@@ -58,15 +59,12 @@ $tchtsub = $tchsub."-".$advMath;
         if ($error != "") {
             $error = "<p> There are error(s)</p>".$error;
         } else {
-          $query = "INSERT INTO `tch-data` (`name`, `email`, `username`, `password`, `class`, `phone-number`, `location`, `subject`, `expertise`) VALUES ('$tchname', '$tchemail', '$tchusername', '$tchpassword', '$tchclass', '$tchphnnum', '$tchtlocn', '$tchtsub', '$tchfield')";
+          $query = "INSERT INTO `tch-data` (`name`, `email`, `username`, `password`, `class`, `phone-number`, `location`, `subject`, `expertise`) VALUES ('$tchname', '$tchemail', '$tchusername', '$hashedpassword', '$tchclass', '$tchphnnum', '$tchtlocn', '$tchtsub', '$tchfield')";
 
           if (!mysqli_query($link, $query)) {
             $error = "<p> Couldn't sign you up!<br> Try again later</p>"; echo("Error description: " . mysqli_error($link));
           } else {
-            $query = "UPDATE `tch-data` SET `password` = '".md5(md5(mysqli_insert_id($link)).$_POST['password'])."' WHERE id = ".mysqli_insert_id($link)." LIMIT 1";
 
-
-            mysqli_query($link, $query);
             $_SESSION['username'] = $tchusername;
             header("Location: welcome-user.php");
 

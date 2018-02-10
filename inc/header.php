@@ -39,7 +39,7 @@
     @import url('https://fonts.googleapis.com/css?family=Alegreya:400,700i|Risque|Ubuntu');
   </style>
   <title>edStand: Make your destiny</title>
-	
+
 </head>
 
 <body>

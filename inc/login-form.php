@@ -81,7 +81,13 @@
           </div>
           <div class="form-check">
           <a class="btn btn-outline-success btn-lg" href="register.php" role="button" name="Sign-up">Sign-up</a>
-        </div>
+          </div>
+          <div class="form-check">
+          <label for="sign-up">Forgot Password?</label>
+          </div>
+          <div class="form-check">
+          <a class="btn btn-outline-success btn-lg" href="forgetpassword.php" role="button" name="fgt-pwsd">Click here</a>
+          </div>
       </form>
 			<div id="error">
 
